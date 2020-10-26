@@ -13,8 +13,26 @@
   	<h2 align="center" style="font-style: bold;">Made with <span class="heart">❤</span> by <span style="font-style: italic;">Ayoub BERDEDDOUCH</span></h2>
 
   	<div align="center">
-    	<img id="bg" width=900px height=600px src="{{ url_for('video_feed') }}">
+
+    	<video autoplay="true" id="bg" width=900px height=600px src="{{url_for('video_feed')}}">
+        
+      </video>
+
+
     </div>
   </body>
   <style>.heart{color:#e25555;}</style>
+  <script type="text/javascript">
+    var video = document.querySelector("#bg");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+          console.log("Something went wrong!");
+        });
+    }
+  </script>
 </html>
