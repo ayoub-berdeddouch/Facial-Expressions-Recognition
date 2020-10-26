@@ -5,6 +5,7 @@
 
 
 ![Model Architecture](https://github.com/ayoub-berdeddouch/Facial-Expressions-Recognition/blob/main/model.png)
+![Facial Expressions](https://i.ytimg.com/vi/Gh4D-W0uCLc/maxresdefault.jpg)
 
 🎥 Demo comming soon....
 
