@@ -1,9 +1,10 @@
 ##----------------------##
 # 	Ayoub BERDEDDOUCH    #
 ##----------------------##
-import cv2
 from model import FacialExpressionModel
 import numpy as np
+import cv2
+
 
 facec = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 model = FacialExpressionModel("model.json", "model_weights.h5")
