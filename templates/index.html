@@ -14,21 +14,19 @@
 
   	<div align="center">
 
-    	<video autoplay="true" id="bg" width=900px height=600px src="{{url_for('video_feed')}}">
-        
-      </video>
+    	<img autoplay="true" id="bg" width=900px height=600px src="{{url_for('video_feed')}}">
 
 
     </div>
   </body>
   <style>.heart{color:#e25555;}</style>
   <script type="text/javascript">
-    var video = document.querySelector("#bg");
+    var img = document.querySelector("#bg");
 
     if (navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true })
+      navigator.mediaDevices.getUserMedia({ img: true })
         .then(function (stream) {
-          video.srcObject = stream;
+          img.srcObject = stream;
         })
         .catch(function (err0r) {
           console.log("Something went wrong!");
