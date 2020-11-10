@@ -14,7 +14,13 @@ class VideoCamera(object):
     def __init__(self):
         #self.video = cv2.VideoCapture("C:/Users/hp/Desktop/Real-Time-Face-Expression-Recognition/facial_exp.mkv")
         #self.video = cv2.VideoCapture("C:/Users/hp/Desktop/Real-Time-Face-Expression-Recognition/presidential_debate.mp4")
-        self.video = cv2.VideoCapture(0)
+        if false:
+            print("[INFO] starting video stream...")
+            self.video = cv2.VideoStream(src=0).start()
+	        time.sleep(2.0)
+        else:
+            print("[INFO] opening video file...")
+            self.video = cv2.VideoCapture(0)
 
     def __del__(self):
         self.video.release()
